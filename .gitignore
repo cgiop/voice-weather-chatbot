@@ -1,0 +1,29 @@
+# Secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Whisper/model/cache files
+*.pt
+*.pth
+
+# Generated audio
+*.mp3
+*.wav
+
+# Streamlit
+.streamlit/
