@@ -133,8 +133,8 @@ if audio is not None:
                                 gemini_key
                             )
 
-                            st.write("### 🌦️ Weather")
-                            st.json(weather)
+                            
+                            
 
                             st.write("### 🤖 Assistant")
                             st.write(response)
