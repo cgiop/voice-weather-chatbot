@@ -21,11 +21,12 @@ weather_key = get_api_key("OPENWEATHER_API_KEY")
 gemini_key = get_api_key("GEMINI_API_KEY")
 
 st.set_page_config(
-    page_title="Voice Weather Assistant"
+    page_title="Voice Weather Assistant",
+    page_icon="🌦️",
 )
 
 st.title("🌦️ Voice Weather Assistant")
-st.write("Stage 3 — Speech-to-Text")
+
 
 
 # Prevent the same recording from being processed
@@ -72,12 +73,12 @@ if audio is not None:
                 transcript = transcribe_audio(audio_bytes)
 
                 if transcript:
-                    st.write("### Recognized Speech")
+                    st.write("### 🗣️ Recognized Speech")
                     st.write(transcript)
 
                     intent, confidence = predict_intent(transcript)
 
-                    st.write("### Detected Intent")
+                    st.write("### 🧠 Detected Intent")
                     st.write(intent)
 
                     st.write(
@@ -132,9 +133,10 @@ if audio is not None:
                                 gemini_key
                             )
 
-                            
+                            st.write("### 🌦️ Weather")
+                            st.json(weather)
 
-                            st.write("### Assistant")
+                            st.write("### 🤖 Assistant")
                             st.write(response)
                             st.session_state.messages.append(
                                 {
